@@ -16,9 +16,19 @@ namespace MeetingApp.Controllers
 		public IActionResult Index()
 		{
 			int saat = DateTime.Now.Hour;
-			ViewBag.selamlama = saat < 18 ? "İyi Günler" : "İyi Akşamlar";
+            ViewBag.selamlama = saat < 18 ? "İyi Günler" : "İyi Akşamlar" ;
+			ViewBag.karsilama = ViewBag.selamlama + " " + ViewBag.userName;
+
+			var meetingInfo = new MeetingInfo()
+			{
+				Id = 1,
+				Location = "İstanbul, ABC Kongre Merkezi",
+				Date = new DateTime(2024,01,20,20,0,0),
+				NumberOfPeople = 100,
+				
+			};
 			
-			return View();
+			return View(meetingInfo);
 		}
 
 		public IActionResult Privacy()
