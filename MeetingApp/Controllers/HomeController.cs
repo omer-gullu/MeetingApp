@@ -17,7 +17,8 @@ namespace MeetingApp.Controllers
 		{
 			int saat = DateTime.Now.Hour;
             ViewBag.selamlama = saat < 18 ? "İyi Günler" : "İyi Akşamlar" ;
-			ViewBag.karsilama = ViewBag.selamlama + " " + ViewBag.userName;
+			
+		
 
 			var meetingInfo = new MeetingInfo()
 			{
