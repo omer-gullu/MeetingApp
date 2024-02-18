@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable< UserInfo>
+
+@{
     ViewBag.Title = "Toplantı Katılım Listesi";
     Layout = "_Layout2";
 }
@@ -15,13 +17,18 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Ömer Güllü</td>
-            <td>Omergullu555@gmail.com</th>
-            <td>Evet</td>
-            <th>
-                <a class="btn btn-sm btn-primary" href="#">Detay</a>
-            </th>
-        </tr>
+        @foreach (var item in Model)
+        {
+          
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Email</td>
+                <td>@item.WillAttend</td>
+                <td><a class="btn btn-sm btn-primary" href="#">Detay</a></td>
+
+            </tr>
+        }
+        }
+
     </tbody>
 </table>
