@@ -1,5 +1,10 @@
-﻿<h1>Merhaba</h1>
+﻿@{
+    ViewBag.Title = "Toplantı Başvuru";
+    Layout = "_Layout2";
+}
 
-<h2>Toplantıya katılım durumunuzu belirtiniz</h2>
+<h1 class="h4">@ViewBag.selamlama</h1>
 
-<a href="#">Başvuru Yap</a>
+<p>Toplantıya katılım durumunuzu belirtiniz</p>
+
+<a class="btn btn-sm btn-outline-primary" asp-controller="Meeting" asp-action="Apply">Başvuru Yap</a>

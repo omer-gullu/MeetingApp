@@ -1,21 +1,26 @@
-﻿<h1>Toplantı Katılım Listesi</h1>
+﻿@{
+    ViewBag.Title = "Toplantı Katılım Listesi";
+    Layout = "_Layout2";
+}
 
-<table>
+<h1>Toplantı Katılım Listesi</h1>
+
+<table class="table table-bordered">
     <thead>
         <tr>
             <th>Ad</th>
             <th>Email</th>
             <th>Katılım Durumu</th>
-            <th>Detay</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <th>Ömer Güllü</th>
-            <th>Omergullu555@gmail.com</th>
-            <th>Katılıyor</th>
+            <td>Ömer Güllü</td>
+            <td>Omergullu555@gmail.com</th>
+            <td>Evet</td>
             <th>
-                <a href="#">Detay</a>
+                <a class="btn btn-sm btn-primary" href="#">Detay</a>
             </th>
         </tr>
     </tbody>

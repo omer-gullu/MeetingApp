@@ -15,6 +15,9 @@ namespace MeetingApp.Controllers
 
 		public IActionResult Index()
 		{
+			int saat = DateTime.Now.Hour;
+			ViewBag.selamlama = saat < 18 ? "İyi Günler" : "İyi Akşamlar";
+			
 			return View();
 		}
 
